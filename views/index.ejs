@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../styles/index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <aside class="bios">
+            <div>
+                <img class="self" src="../images/self.jpg" alt="self" />
+                <div class="type_bio">
+                    <div class="bio">
+                        <div>Github :</div>
+                        <a href="https://github.com/dexterous17">dexterous17</a>
+                    </div>
+                    <div class="bio">
+                        <div>Linkedin :</div>
+                        <a href="https://github.com/dexterous17">Profile Link</a>
+                    </div>
+                    <div class="bio">
+                        <div>Email :</div>
+                        <a href="mailto:harshilprajapatiofficial@gmail.com">Harshil Prajapati</a>
+                    </div>
+                    <div class="bio">
+                        <div>Resume :</div>
+                        <div>Resume link</div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutme">
+                <div>
+                    <div style="font-size: xx-large;">Hello there, I am Harshil Nitinkumar Prajapti, </div>
+                </div>
+                <div style="font-size: x-large;">I am a Full Stack Developer</div>
+            </div>
+        </aside>
+            <div class="skills">
+                <div style="font-size: x-large;">
+                    Skills
+                </div>
+                <div class="skill_group">
+                    <% skills.forEach(data=>{%>
+                        <div class="skill card">
+
+                            <div class="skill_type">
+                                <%=data.name%>
+                            </div>
+                            <div class="skills_name">
+                                <% data.files.forEach(filesdata=>{ %>
+                                    <div class="skill_name_div">
+                                        <div class="skill_name">
+                                            <%=filesdata.replace( /\|*.SVG|.PNG\|*/gim,'')%>
+                                        </div>
+                                        <img class="skill_img" src="../logo/<%=data.name%>/<%=filesdata%>"
+                                            alt="<%=filesdata%>">
+                                    </div>
+                                    <%})%>
+                            </div>
+                        </div>
+                        <%})%>
+                </div>
+            </div>
+
+            <div class="project">
+                <div style="font-size: x-large;">Project</div>
+                <div style="display: flex;flex-wrap: wrap;flex-direction: row; justify-content: space-evenly;">
+                    <% projects.forEach(data=> { %>
+                        <div class="card"
+                            style="display: flex;flex-direction: column; margin: 10px; height: max-content;">
+                            <div style="font-weight: 500; font-size: 20px; padding-left: 15px; ">
+                                <%=data.name%> <a href="">Link to website</a>
+                            </div>
+                            <div class="project_skills"
+                                style="display: flex; justify-content: space-between; flex-direction: column;">
+                                <% data.technologies.forEach(data=>{ %>
+                                    <div class="card"
+                                        style="background-color: rgb(90, 90, 252); color: aliceblue; padding: 4px; display: flex; align-items: center;">
+                                        <%=data%>
+                                    </div>
+                                    <% })%>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+            <div class="certificates" style="display: flex;">
+                <div style="font-size: x-large;">Certificates</div>
+                <div style="display:flex;justify-content: space-around;">
+                    <div class="certificate card">
+                        <div class="name">Udemy Javascript Master Class</div>
+                        <div class="link">
+                            <a href="../PDF/UC-9ae80324-7c4c-412c-af2e-b7260d473702.pdf">link to certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate card">
+                        <div class="name">Udemy React js Master Class</div>
+                        <div class="link">
+                            <a href="../PDF/UC-a65ac215-758c-492f-a35d-11d760960a6d.pdf">link to certificate</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="certificate card">
+                            <div class="name">Course Google UI foundation</div>
+                            <div class="link"></div>
+                            <div class="link"></div>
+                            <div class="link"></div>
+                            <div class="link"></div>
+                            <div class="link"></div>
+                            <div class="link"></div>
+                            <div class="link"></div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+</body>
+
+</html>

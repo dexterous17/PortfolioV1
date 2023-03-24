@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Amazon Clone",
+        "link":"",
+        "technologies": [
+            "Materialui",
+            "Firebase",
+            "Stripe",
+            "Axios",
+            "Moment.js",
+            "React",
+            "React currency format",
+            "React router dom"
+        ]
+    },
+    {
+        "name": "Hulu Clone",
+        "link":"",
+        "technologies": []
+    },
+    {
+        "name": "Reading list",
+        "link":"",
+        "technologies": [
+            "React",
+            "Local storage"
+        ]
+    },
+    {
+        "name": "Covid-19",
+        "link":"",
+        "technologies": [
+            "Axios",
+            "D3.js"
+        ]
+    }
+]
